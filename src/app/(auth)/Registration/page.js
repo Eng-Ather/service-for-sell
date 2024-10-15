@@ -1,5 +1,6 @@
 // main registration page
 
+import styles from "../../(auth)/signin_signup.css"; // Ensure this path is correct
 import Link from "next/link";
 import logo from "../../public/logo.png"
 import { Button } from "@/components/ui/button";
@@ -19,12 +20,12 @@ const RegistrationPage = () => {
         <div className="option_box">
          
           <Link href="../Registration/registerAsAclient" passHref>
-            <Button variant="destructive" style={{width:"100%"}}>
+            <Button variant="destructive" >
             Register as Client</Button>
           </Link>
 
           <Link href="../Registration/registerAsAcostumer" passHref>
-            <Button variant="destructive" style={{width:"100%"}}>
+            <Button variant="destructive">
             Register as Costumer</Button>
           </Link>
         </div>
