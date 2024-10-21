@@ -113,14 +113,14 @@ const Home = () => {
         )}
       </main>
 
-      <footer className="m-5 row-start-3 flex gap-6 flex-wrap items-center justify-center">
+      <footer className="mt-5 row-start-3 flex gap-6 flex-wrap items-center justify-center">
         {/* next.js logo/image */}
         <Image
           className="dark:invert"
           src="https://nextjs.org/icons/next.svg"
           alt="Next.js logo"
-          width={180}
-          height={38}
+          width={70}
+          height={20}
           priority
         />
 
