@@ -7,6 +7,10 @@ nav {
     border-bottom: 10px solid red;
     /* background-color: rgba(210, 10, 10, 0.887); */
     background-color: #333;
+    position: fixed; /* Fixes the nav bar at the top */
+    top: 0; /* Aligns it to the top of the page */
+    left: 0; /* Ensures it stretches across the entire width */
+    z-index: 1000; /* Keeps it above other content */
    }
 
 ul {

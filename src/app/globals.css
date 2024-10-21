@@ -91,6 +91,7 @@ body {
 
 .title_bar {
   /* border: 2px solid brown; */
+  padding-top: 70px;
   width: 100%;
   text-align: center;
 }
@@ -98,14 +99,16 @@ body {
 .hero_section {
   /* border: 2px solid brown; */
   margin: 0px auto;
-  width: 90%;
+  min-height:60vh ;
+  width: 95%;
 }
 
 .client_profile {
   margin-top: 30px;
   height: 150px;
   border-bottom: 15px solid red;
-  box-shadow: 0px 2px 1px black;
+  box-shadow: 0px 6px 1px black;
+  padding: 5px;
 
   /* color: white; */
   /* background-color: rgb(218, 55, 55);
@@ -118,4 +121,4 @@ body {
 footer {
   border: 2px solid brown;
   width: 95%;
-}
+  }

@@ -58,7 +58,10 @@ const Home = () => {
 
       <main className="hero_section">
         {loading ? (
-          "loading..."
+          <div className="text-2xl text-center my-36 text-red-500 font-extrabold  "
+          style={{ textShadow: "2px 1px 3px black" }}> 
+          Please wait, synchronizing App with Firebase...
+          </div>
         ) : (
           <div>
             {data.map((item, index) => (
