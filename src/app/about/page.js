@@ -2,6 +2,7 @@
 import React from "react";
 import { Header } from "@/hader/page"; // Adjust the import path as necessary
 import Image from "next/image"; // Import Image for optimized images
+import watsapp1 from "@/app/public/watsapp1.png";
 
 const AboutPage = () => {
   return (
@@ -65,6 +66,7 @@ const AboutPage = () => {
           </ol>
         </section>
       </div>
+
       <section className="about_section_footer">
         <h2 className="text-xl text-center text-white bg-red-500 font-bold">
           Contact Us
@@ -73,9 +75,34 @@ const AboutPage = () => {
         <p className=" flex flex-col items-center gap-4 py-4 bg-black text-white">
           If you have any questions, feel free to reach out to me at:
           <br />
+
+          <div className=" flex w-60 h-9 justify-between">
+
+          <a
+                          href={`https://wa.me/923320145410`} // Use dynamic phone number
+                          target="_blank"
+                          rel="noopener noreferrer" // Security best practice
+                          className="whatsapp-button" // Changed to className
+                        >
+                          {/* WhatsApp Icon*/}
+                          <img
+                            src={watsapp1.src}
+                            style={{
+                              width: "45px",
+                              height: "30px",
+                              // margin: "0px auto",
+                            }}
+                            alt="923320145410"
+                          />
+                        </a>
           <a href="mailto:engr.atherali@gmail.com" className="text-blue-500">
             engr.atherali@gmail.com
           </a>
+
+          </div>
+          
+          
+
           <div className="flex flex-wrap items-center justify-center gap-6">
             <Image
               className="filter invert" // This will make the logo white
