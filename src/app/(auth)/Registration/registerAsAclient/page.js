@@ -28,9 +28,12 @@ const ClientRegrestrationPage = () => {
   const [clientName, setClientName] = useState("");
   const [clientWorkFeild, setClientWorkFeild] = useState(" ");
   const [clientImage, setClientImage] = useState(null);
+  const [loading, setLoading] = useState(false); // Loading state
+
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true when submission starts
 
     try {
       // Create user with email and password
@@ -49,7 +52,7 @@ const ClientRegrestrationPage = () => {
         imageUrl = await getDownloadURL(imageRef); // Get the download URL of the uploaded image
       }
 
-      // After successful registration, update customer details in Firestore
+      // After successful registration, update client details in Firestore
       const docRef = await addDoc(collection(db, "usercollection"), {
         roll: "client",
         name: clientName,
@@ -60,7 +63,7 @@ const ClientRegrestrationPage = () => {
       });
 
       console.log("Document written with ID:", docRef.id);
-      alert("Registration successful");
+      // alert("Registration successful");
       router.push("/"); // Redirect to home page
 
       // Clear all fields
@@ -74,6 +77,9 @@ const ClientRegrestrationPage = () => {
       // Handle errors from Firebase and Firestore
       const errorMessage = error.message;
       alert(errorMessage);
+    }
+    finally {
+      setLoading(false); // Set loading to false when submission completes
     }
   };
 
@@ -93,6 +99,13 @@ const ClientRegrestrationPage = () => {
         </h2>
 
         <div className="registration_form">
+        {/* Show loading indicator while loading */}
+        {loading ? ( 
+            <div className="text-2xl text-center my-10 text-red-500 font-extrabold opacity-100 transition-opacity duration-700 ease-in-out animate-pulse "
+            style={{ textShadow: "2px 1px 3px black" }}> 
+            Please wait, synchronizing Data with Firebase...
+            </div>
+          ) : (
           <form className="registration_form" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="fname">Name:</label>
@@ -101,6 +114,7 @@ const ClientRegrestrationPage = () => {
                 type="text"
                 required
                 className="client_name"
+                placeholder="Ather Ali Siddiui"
                 onChange={(e) => {
                   setClientName(e.target.value);
                 }}
@@ -114,6 +128,7 @@ const ClientRegrestrationPage = () => {
                 type="email"
                 required
                 className="client_email"
+                placeholder="abc@gmail.com"
                 onChange={(e) => {
                   setClientEmail(e.target.value);
                 }}
@@ -129,6 +144,7 @@ const ClientRegrestrationPage = () => {
                 minLength={6}
                 maxLength={12}
                 className="client_password"
+                placeholder="*******"
                 onChange={(e) => {
                   setClientPassword(e.target.value);
                 }}
@@ -142,6 +158,7 @@ const ClientRegrestrationPage = () => {
                 type="text"
                 required
                 className="client_contact"
+                placeholder="must be in this format => 923212257154 "
                 onChange={(e) => {
                   setClientContact(e.target.value);
                 }}
@@ -149,12 +166,13 @@ const ClientRegrestrationPage = () => {
             </div>
 
             <div>
-              <label htmlFor="workFeild">Work/Feild</label>
+              <label htmlFor="workFeild">Profession</label>
               <input
                 name="workFeild"
                 type="text"
                 required
                 className="client_workFeild"
+                placeholder="electrican/carpanter/driver"
                 onChange={(e) => {
                   setClientWorkFeild(e.target.value);
                 }}
@@ -179,6 +197,8 @@ const ClientRegrestrationPage = () => {
               Submit{" "}
             </Button>
           </form>
+          )}  
+          {/* end of loading stat */}
         </div>
       </div>
     </>

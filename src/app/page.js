@@ -58,9 +58,9 @@ const Home = () => {
 
       <main className="hero_section">
         {loading ? (
-          <div className="text-2xl text-center my-36 text-red-500 font-extrabold  "
+          <div className="text-2xl text-center my-36 text-red-500 font-extrabold opacity-100 transition-opacity duration-700 ease-in-out animate-pulse "
           style={{ textShadow: "2px 1px 3px black" }}> 
-          Please wait, synchronizing App with Firebase...
+          Please wait, App/Web is synchronizing with Firebase...
           </div>
         ) : (
           <div>
@@ -101,7 +101,7 @@ const Home = () => {
                 <div>
                   {
                     <img
-                      style={{ width: "80px", height: "70px" }}
+                      style={{ width: "85px", height: "85px", borderRadius:"10px" }}
                       src={item.image}
                       alt="image"
                     />

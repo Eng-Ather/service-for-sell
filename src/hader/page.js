@@ -125,7 +125,7 @@ const Header = () => {
 
         <li>
           {currentUserInfo.isLogin ? (
-            <Sheet>
+            <Sheet className="sheetStyle">
               <SheetTrigger>My Profile</SheetTrigger>
               <SheetContent>
                 <SheetHeader>
