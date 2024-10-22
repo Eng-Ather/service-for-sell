@@ -77,7 +77,7 @@ const AboutPage = () => {
           If you have any questions, feel free to reach out to me at:
           <br />
 
-          <div className=" flex w-60 h-9 justify-between">
+          <div className=" flex w-60 h-9 justify-between py-4">
 
           <a
                           href={`https://wa.me/923320145410`} // Use dynamic phone number
@@ -102,18 +102,21 @@ const AboutPage = () => {
 
           </div>
           
-          
-
-          <div className="flex flex-wrap items-center justify-center gap-6">
-            <Image
-              className="filter invert" // This will make the logo white
-              src="https://nextjs.org/icons/next.svg"
-              alt="Next.js logo"
-              width={70}
-              height={20}
-              priority
-            />
-          </div>
+           <a
+            className="flex items-center justify-center gap-2 py-4 hover:underline"
+            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          <Image
+            className="filter invert" // This will make the logo white
+            src="https://nextjs.org/icons/next.svg"
+            alt="Next.js logo"
+            width={70}
+            height={20}
+            priority
+          />
+          </a>
         </p>
         </div>
       </section>

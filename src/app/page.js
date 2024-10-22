@@ -126,6 +126,13 @@ const Home = () => {
 
       <footer className="mt-5 flex flex-col items-center gap-4 py-4 bg-black text-white">
         <div className="flex flex-wrap items-center justify-center gap-6">
+          
+        <a
+            className="flex items-center gap-2 hover:underline"
+            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
           <Image
             className="filter invert" // This will make the logo white
             src="https://nextjs.org/icons/next.svg"
@@ -134,21 +141,8 @@ const Home = () => {
             height={20}
             priority
           />
-          {/* <a
-            className="flex items-center gap-2 hover:underline"
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="https://nextjs.org/icons/file.svg"
-              alt="File icon"
-              width={16}
-              height={16}
-            />
-            Learn
-          </a> */}
+         
+          </a>
         </div>
         <div className="text-center">
           <p>© 2024 Engineer's Production. All rights reserved.</p>
@@ -158,7 +152,7 @@ const Home = () => {
               href="mailto:engr.atherali@gmail.com"
               className="hover:underline"
             >
-             engr.atherali@gmail.com.com
+             engr.atherali@gmail.com
             </a>
           </p>
           <p>Version 1.0.0</p>
