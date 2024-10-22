@@ -124,35 +124,6 @@ const Home = () => {
         )}
       </main>
 
-      {/* <footer className="mt-5 row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={70}
-          height={20}
-          priority
-        />
-
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        
-      </footer> */}
-
       <footer className="mt-5 flex flex-col items-center gap-4 py-4 bg-black text-white">
         <div className="flex flex-wrap items-center justify-center gap-6">
           <Image
@@ -163,7 +134,7 @@ const Home = () => {
             height={20}
             priority
           />
-          <a
+          {/* <a
             className="flex items-center gap-2 hover:underline"
             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
@@ -177,7 +148,7 @@ const Home = () => {
               height={16}
             />
             Learn
-          </a>
+          </a> */}
         </div>
         <div className="text-center">
           <p>© 2024 Engineer's Production. All rights reserved.</p>
