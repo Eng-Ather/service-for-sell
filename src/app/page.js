@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 // import whatsapp from "../public/whatsapp.jpg";
-import  watsapp  from "./public/watsapp.jpg";
+import watsapp from "./public/watsapp.jpg";
 import { Header } from "@/hader/page";
 import { Button } from "@/components/ui/button";
 import { collection, getDocs, db } from "@/lib/firebase";
@@ -48,19 +48,26 @@ const Home = () => {
           className="text-2xl text-red-500 font-extrabold m-3 "
           style={{ textShadow: "2px 1px 3px black" }}
         >
-         SERVICE FOR SELL
-        <p className="mt-4 text-sm text-red-450" style={{ textShadow: "0px 0px 0px black", textDecoration:"underline" }}>
-          
-          Here, Skills Connect with Your Needs !</p>
- 
+          SERVICE FOR SELL
+          <p
+            className="mt-4 text-sm text-red-450"
+            style={{
+              textShadow: "0px 0px 0px black",
+              textDecoration: "underline",
+            }}
+          >
+            Here, Skills Connect with Your Needs !
+          </p>
         </h1>
       </div>
 
       <main className="hero_section">
         {loading ? (
-          <div className="text-2xl text-center my-36 text-red-500 font-extrabold opacity-100 transition-opacity duration-700 ease-in-out animate-pulse "
-          style={{ textShadow: "2px 1px 3px black" }}> 
-          Please wait, App/Web is synchronizing with Firebase...
+          <div
+            className="text-2xl text-center my-36 text-red-500 font-extrabold opacity-100 transition-opacity duration-700 ease-in-out animate-pulse "
+            style={{ textShadow: "2px 1px 3px black" }}
+          >
+            Please wait, App/Web is synchronizing with Firebase...
           </div>
         ) : (
           <div>
@@ -101,7 +108,11 @@ const Home = () => {
                 <div>
                   {
                     <img
-                      style={{ width: "85px", height: "85px", borderRadius:"10px" }}
+                      style={{
+                        width: "85px",
+                        height: "85px",
+                        borderRadius: "10px",
+                      }}
                       src={item.image}
                       alt="image"
                     />
@@ -113,8 +124,8 @@ const Home = () => {
         )}
       </main>
 
-      <footer className="mt-5 row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        {/* next.js logo/image */}
+      {/* <footer className="mt-5 row-start-3 flex gap-6 flex-wrap items-center justify-center">
+        
         <Image
           className="dark:invert"
           src="https://nextjs.org/icons/next.svg"
@@ -139,36 +150,48 @@ const Home = () => {
           />
           Learn
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        
+      </footer> */}
+
+      <footer className="mt-5 flex flex-col items-center gap-4 py-4 bg-black text-white">
+        <div className="flex flex-wrap items-center justify-center gap-6">
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            className="filter invert" // This will make the logo white
+            src="https://nextjs.org/icons/next.svg"
+            alt="Next.js logo"
+            width={70}
+            height={20}
+            priority
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+          <a
+            className="flex items-center gap-2 hover:underline"
+            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              aria-hidden
+              src="https://nextjs.org/icons/file.svg"
+              alt="File icon"
+              width={16}
+              height={16}
+            />
+            Learn
+          </a>
+        </div>
+        <div className="text-center">
+          <p>© 2024 Engineer's Production. All rights reserved.</p>
+          <p>
+            Contact us:{" "}
+            <a
+              href="mailto:engr.atherali@gmail.com"
+              className="hover:underline"
+            >
+             engr.atherali@gmail.com.com
+            </a>
+          </p>
+          <p>Version 1.0.0</p>
+        </div>
       </footer>
     </div>
   );

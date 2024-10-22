@@ -11,7 +11,7 @@
     width: 35%;
     height: 590px;
     /* padding-top: 70px; */
-    margin: 45px auto;
+    margin: 70px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -62,8 +62,12 @@
 .costumer_contact,
 .costumer_image,
 .costumer_name,
-.costumer_fname
-{
+.costumer_fname, .userUpdated_name,
+.userUpdated_email,
+.userUpdated_password,
+.userUpdated_contact,
+.userUpdated_workField,
+.userUpdated_image {
     /* font-weight: bold; */
     border-radius: 5px;
     width: 100%;

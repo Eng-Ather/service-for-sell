@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./hader.css";
 import logo from "../app/public/logo.png";
 import { Button } from "@/components/ui/button";
-
+import { useRouter } from "next/navigation"; // Import from next/navigation for the App Router
 import { useState, useEffect } from "react";
 import {
   auth,
@@ -26,6 +26,9 @@ import {
 // import { auth, signOut } from "@/lib/firebase";
 
 const Header = () => {
+ 
+  const router = useRouter(); // Initialize useRouter
+ 
   const [currentUserInfo, setCurrentUSerInfo] = useState({
     isLogin: false,
     currentUserEmail: " ",
@@ -168,9 +171,11 @@ const Header = () => {
                     justifyContent: "space-between",
                   }}
                 >
-                  <Button onClick={editProfile} variant="destructive">
+                  {/* <Button 
+                 onClick={() => router.push("/updateProfile")}
+                  variant="destructive">
                     Edit Profile
-                  </Button>
+                  </Button> */}
                   <Button onClick={logoutUser} variant="destructive">
                     Logout
                   </Button>
