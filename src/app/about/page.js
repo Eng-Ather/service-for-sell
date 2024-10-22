@@ -72,7 +72,8 @@ const AboutPage = () => {
           Contact Us
         </h2>
 
-        <p className=" flex flex-col items-center gap-4 py-4 bg-black text-white">
+        <div className=" flex flex-col items-center gap-4 p-4 bg-black text-white">
+        <p >
           If you have any questions, feel free to reach out to me at:
           <br />
 
@@ -114,6 +115,7 @@ const AboutPage = () => {
             />
           </div>
         </p>
+        </div>
       </section>
     </div>
   );
