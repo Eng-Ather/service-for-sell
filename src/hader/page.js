@@ -119,11 +119,11 @@ const Header = () => {
         </li>
 
         <li>
-          <Link href="/">HOME</Link>
+          <Link href="/">Home</Link>
         </li>
 
         <li>
-          <Link href="/about">ABOUT</Link>
+          <Link href="/about">About us</Link>
         </li>
 
         <li>
@@ -183,7 +183,7 @@ const Header = () => {
               </SheetContent>
             </Sheet>
           ) : (
-            <Link href="/login">LOGIN</Link>
+            <Link href="/login">Signin</Link>
           )}
         </li>
 
@@ -191,7 +191,7 @@ const Header = () => {
           {currentUserInfo.isLogin ? (
             <Button onClick={logoutUser}>Logout</Button>
           ) : (
-            <Link href="/Registration">CREATE ACCOUNT</Link>
+            <Link href="/Registration">Signup</Link>
           )}
         </li>
       </ul>

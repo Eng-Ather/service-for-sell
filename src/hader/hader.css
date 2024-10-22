@@ -22,9 +22,10 @@ ul {
 
 li:hover{
     text-decoration: underline;
-    letter-spacing: 2px;
-    font-weight: bold;
-    transition: 0.5s;
+    /* letter-spacing: 2px; */
+    /* font-weight: bold; */
+    transform: scale(1.2);
+    transition: 1.5s;
 }
 
 
